@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import Header from './components/Header';
 
 export default function App() {
   return (
     <View style={styles.rootContainer}>
-      <Text>Hello World</Text>
+      <Header />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   rootContainer: {
-    paddingVertical: 50,
-    paddingHorizontal: 15,
+    flex: 1,
   },
 });
