@@ -2,9 +2,10 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 const Header = (props) => {
+  const { title } = props;
   return (
     <View style={styles.header}>
-      <Text style={styles.headerTitle}>Guess A Number</Text>
+      <Text style={styles.headerTitle}>{title}</Text>
     </View>
   );
 };
