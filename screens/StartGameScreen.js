@@ -11,6 +11,7 @@ import {
 import Card from '../components/Card';
 import Colors from '../constants/colors';
 import Input from '../components/Input';
+import SelectedNumber from '../components/SelectedNumber';
 
 const StartGameScreen = (props) => {
   const [enteredValue, setEnteredValue] = useState('');
@@ -35,6 +36,7 @@ const StartGameScreen = (props) => {
     }
     setSelectedNumber(num);
     setEnteredValue('');
+    Keyboard.dismiss();
   };
 
   return (
@@ -70,7 +72,7 @@ const StartGameScreen = (props) => {
             </View>
           </View>
         </Card>
-        <Text>{selectedNumber && `Selected Number: ${selectedNumber}`}</Text>
+        <SelectedNumber selectedNumber={selectedNumber} />
       </View>
     </TouchableWithoutFeedback>
   );
